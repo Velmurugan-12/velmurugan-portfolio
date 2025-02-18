@@ -9,7 +9,7 @@ function App() {
   const [toggleSideBar, setToggleSideBar] = useState(false);
 
   return (
-    <Router>
+    <Router basename="/velmurugan-portfolio/">
       <Routes>
         
         <Route
