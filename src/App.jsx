@@ -1,35 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar";
-import SeconNavbar from "./SeconNavbar"; 
 import HeroSection from "./HeroSection";
 import AboutMe from "./Aboutme"; 
+import HireMe from "./HireMe";
 
 function App() {
-  const [toggleSideBar, setToggleSideBar] = useState(false);
-
   return (
     <Router basename="/velmurugan-portfolio/">
-      <Routes>
-        
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar toggleSideBar={toggleSideBar} setToggleSideBar={setToggleSideBar} />
-              <HeroSection />
-            </>
-          }
-        />
+      {/* Navbar outside Routes so it appears on all pages */}
+      <Navbar />
 
-        <Route
-          path="/about_me"
-          element={
-            <>
-              <AboutMe />
-            </>
-          }
-        />
+      <Routes>
+        <Route path="/" element={<HeroSection />} />
+        <Route path="/about_me" element={<AboutMe />} />
+        <Route path="/hire_me" element={<HireMe />} />
       </Routes>
     </Router>
   );
