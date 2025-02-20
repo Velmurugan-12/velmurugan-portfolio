@@ -73,11 +73,11 @@ const HeroSection = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center justify-between md:justify-start gap-5 p-2 sm:p-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 p-2 sm:p-4 w-full">
             <a
               href={Resume}
               download="Velmurugan_Resume.pdf"
-              className="bg-[#F6CD0A] hover:bg-yellow-300 px-5 py-2 ml-3 rounded flex items-center text-center transition whitespace-nowrap w-[50%] md:w-auto  font-semibold text-gray-800"
+              className="bg-[#F6CD0A] hover:bg-yellow-300 px-6 py-2 rounded flex items-center justify-center text-center gap-2 w-full sm:w-auto font-semibold text-gray-800"
               onClick={handleDownloadAnimation}
             >
               Resume
@@ -86,11 +86,12 @@ const HeroSection = () => {
 
             <Link
               to="/about_me"
-              className="border border-gray-500 px-5 py-2 mr-3 rounded hover:border-[#F6CD0A] whitespace-nowrap w-[50%] md:w-auto"
+              className="border border-gray-500 px-6 py-2 rounded hover:border-[#F6CD0A] text-center w-full sm:w-auto"
             >
               About me
             </Link>
           </div>
+
         </div>
 
         {/* Right Side - Profile Image & Tech Icons */}
