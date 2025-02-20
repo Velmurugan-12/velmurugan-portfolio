@@ -1,20 +1,24 @@
-import React from "react";
+import React, { useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar";
+import Layout from "./Layout";  // New component handling Navbar logic
 import HeroSection from "./HeroSection";
-import AboutMe from "./Aboutme"; 
+import AboutMe from "./AboutMe";
 import HireMe from "./HireMe";
 
 function App() {
   return (
     <Router basename="/velmurugan-portfolio/">
-      {/* Navbar outside Routes so it appears on all pages */}
-      <Navbar />
-
       <Routes>
-        <Route path="/" element={<HeroSection />} />
-        <Route path="/about_me" element={<AboutMe />} />
-        <Route path="/hire_me" element={<HireMe />} />
+        <Route
+          path="/"
+          element={
+            <Layout>
+              <HeroSection />
+              <HireMe />
+            </Layout>
+          }
+        />
+        <Route path="/about_me" element={<AboutMe />} /> {/* AboutMe has its own Navbar */}
       </Routes>
     </Router>
   );

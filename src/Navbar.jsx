@@ -4,7 +4,7 @@ import { HiBars3CenterLeft, HiMiniHome } from "react-icons/hi2";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaArrowRightLong, FaUser } from "react-icons/fa6";
 
-const Navbar = () => {
+const Navbar = ({ onHireMeClick }) => {  // ✅ Accept function from App.js
   const [toggleSideBar, setToggleSideBar] = useState(false);
   const [activeLink, setActiveLink] = useState("/");
   const location = useLocation();
@@ -72,9 +72,9 @@ const Navbar = () => {
         </div>
 
         {/* Hire Me Button */}
-        <Link to="/hire_me" className="flex items-center gap-3 py-5">
+        <button onClick={onHireMeClick} className="flex items-center gap-3 py-5">
           Hire Me <FaArrowRightLong className="rotate-180 text-2xl" />
-        </Link>
+        </button>
       </nav>
     </header>
   );
