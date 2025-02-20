@@ -77,7 +77,7 @@ const HeroSection = () => {
             <a
               href={Resume}
               download="Velmurugan_Resume.pdf"
-              className="bg-[#F6CD0A] hover:bg-yellow-300 px-5 py-2 ml-3 rounded text-center transition whitespace-nowrap w-[50%] md:w-auto gap-3 font-semibold text-gray-800"
+              className="bg-[#F6CD0A] hover:bg-yellow-300 px-5 py-2 ml-3 rounded flex items-center transition whitespace-nowrap w-[50%] md:w-auto gap-3 font-semibold text-gray-800"
               onClick={handleDownloadAnimation}
             >
               Resume
