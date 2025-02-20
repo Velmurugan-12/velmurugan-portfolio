@@ -73,7 +73,7 @@ const HeroSection = () => {
           </div>
 
           {/* Buttons */}
-          <div className="flex flex-col  items-center justify-center md:justify-start gap-4 p-2 sm:p-4 w-full">
+          <div className="flex flex-row  items-center justify-center md:justify-start gap-4 p-2 sm:p-4 w-full">
             <a
               href={Resume}
               download="Velmurugan_Resume.pdf"
