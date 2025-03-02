@@ -6,6 +6,7 @@ import AboutMe from "./AboutMe";
 import HireMe from "./HireMe";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import AllProjects from "./AllProjects";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           }
         />
         <Route path="/about_me" element={<AboutMe />} />
+        <Route path="/all_projects" element={<AllProjects />} />
       </Routes>
     </Router>
   );

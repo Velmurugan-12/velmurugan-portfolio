@@ -6,7 +6,7 @@ import { FaCircleArrowLeft } from "react-icons/fa6";
 import PreviewFallback from "./PreviewFallback";
 
 
-import ProjectPreviewSM from "./ProjectPreviewSM";
+import ProjectPreview from "./ProjectPreview";
 
 function Projects() {
     const { ytClone } = useContext(MyContext);
@@ -37,7 +37,7 @@ function Projects() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
                 {sideProjects.map((project, index) => (
                     <Suspense fallback={<PreviewFallback />} key={index}>
-                        <ProjectPreviewSM {...project} />
+                        <ProjectPreview {...project} />
                     </Suspense>
                 ))}
             </div>

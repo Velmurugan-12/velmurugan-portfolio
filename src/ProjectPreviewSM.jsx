@@ -6,7 +6,7 @@ const ProjectPreviewSM = ({ video, projectSummary, projectTitle, projectType, te
   return (
     <div className='group relative rounded-xl grid-rows-2 overflow-hidden cursor-pointer'>
        
-        <video src={video} autoPlay muted loop >
+        <video src={video} >
             {projectSummary}
 
             </video>
