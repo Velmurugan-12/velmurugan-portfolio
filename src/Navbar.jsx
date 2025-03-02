@@ -21,8 +21,17 @@ const Navbar = ({ onHireMeClick }) => {
     setToggleSideBar(false);
   };
 
+  const handleScrollToProjects = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    } 
+
+    setToggleSideBar(false);
+  };
+
   const navLinks = [
-    { linkTitle: "Projects", link: "/projects" },
+    { linkTitle: "Projects", action: handleScrollToProjects },
     { linkTitle: "Skills", action: handleScrollToSkills },
     { linkTitle: "Contacts", link: "/contacts" },
   ];
@@ -43,7 +52,7 @@ const Navbar = ({ onHireMeClick }) => {
           )}
         </button>
 
-        {/* Mobile Sidebar */}
+        
         {toggleSideBar && (
           <div className="md:hidden absolute top-16 left-0 p-5 pt-1 pr-8 bg-[#1D2430] text-gray-400 rounded-br-2xl shadow-2xl border-gray-500 border-l-0 border-t-0 border-2">
             <div className="flex flex-col items-start">
@@ -93,7 +102,7 @@ const Navbar = ({ onHireMeClick }) => {
           </div>
         )}
 
-        {/* Desktop Navigation */}
+        
         <div className="hidden md:flex gap-6">
           <Link
             to="/"
@@ -123,7 +132,7 @@ const Navbar = ({ onHireMeClick }) => {
           )}
         </div>
 
-        {/* Hire Me Button */}
+        
         <button onClick={onHireMeClick} className="flex items-center gap-3 py-5">
           Hire Me <FaArrowRightLong className="rotate-180 text-2xl" />
         </button>

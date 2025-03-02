@@ -62,13 +62,13 @@ const HeroSection = () => {
           {/* Social Icons */}
           <div className="flex justify-center md:justify-start gap-4 p-1 sm:p-4 mb-4">
             <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
-              <ImGithub className="w-7 h-7 text-gray-400 hover:text-white transition transform hover:scale-125" />
+              <ImGithub className="w-7 h-7 text-gray-400 hover:text-white  transition transform hover:scale-125" />
             </a>
             <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
-              <SiLinkedin className="w-7 h-7 text-gray-400 hover:text-[#0B63BD] transition transform hover:scale-125" />
+              <SiLinkedin className="w-7 h-7 text-gray-400 hover:text-[#0B63BD]  transition transform hover:scale-125" />
             </a>
             <a href="https://instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer">
-              <SiInstagram className="w-7 h-7 text-gray-400 hover:text-[#F72F7E] transition transform hover:scale-125" />
+              <SiInstagram className="w-7 h-7 text-gray-400 hover:text-[#F72F7E]  transition transform hover:scale-125" />
             </a>
           </div>
 

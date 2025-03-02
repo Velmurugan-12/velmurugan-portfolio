@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";  // New component handling Navbar logic
+import Layout from "./Layout";
 import HeroSection from "./HeroSection";
 import AboutMe from "./AboutMe";
 import HireMe from "./HireMe";
+import Skills from "./Skills";
+import Projects from "./Projects";
 
 function App() {
   return (
@@ -14,11 +16,13 @@ function App() {
           element={
             <Layout>
               <HeroSection />
+              <Projects />
+              <Skills />
               <HireMe />
             </Layout>
           }
         />
-        <Route path="/about_me" element={<AboutMe />} /> {/* AboutMe has its own Navbar */}
+        <Route path="/about_me" element={<AboutMe />} />
       </Routes>
     </Router>
   );

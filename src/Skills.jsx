@@ -43,7 +43,7 @@ const Skills = () => {
 				            Skills
 				        <span className="text-gray-500 text-2xl">& Technologies</span>
 			      </h1>
-            <p className='  text-gray-200 mt-5  leading-7'>
+            <p className='  text-gray-200 mt-5 text-justify  leading-7'>
                 I not only work with these technologies but excel in using them with best practices to deliver high-quality results.
                 I have been working with all these skills to build my portfolio projects.Proficient in <span className="font-bold ">React JS</span>,{" "}
 				      <span className="font-bold ">JavaScript</span>, and modern frontend technologies.
