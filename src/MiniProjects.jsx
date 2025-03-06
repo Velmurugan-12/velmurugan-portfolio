@@ -10,6 +10,7 @@ const MiniProjects = () => {
 
 const {
     loginform,
+	emojigenerator
 } = useContext(MyContext);
 const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -19,7 +20,15 @@ const miniProjectsDetails = [
         projectSummary: "Login-form | Preview",
         projectTitle: "LoginForm",
         gitHubUrl: "https://github.com/Velmurugan-12/login-form",
-        projectUrl: "https://login-form-register-eight.vercel.app/",
+        projectUrl: "https://login-form-register-eight.vercel.app",
+    },
+
+	{
+        video: emojigenerator,
+        projectSummary: "Emoji-Generator | Preview",
+        projectTitle: "Emoji-Generator",
+        gitHubUrl: "https://github.com/Velmurugan-12/emoji-generator",
+        projectUrl: "https://emoji-generator-rose.vercel.app",
     },
 ]
 
