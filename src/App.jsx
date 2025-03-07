@@ -10,7 +10,7 @@ import AllProjects from "./AllProjects";
 
 function App() {
   return (
-    <Router basename="/velmurugan-portfolio">
+    <Router basename="/velmurugan-portfolio/">
       <Routes>
         <Route
           path="/"
