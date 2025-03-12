@@ -10,7 +10,9 @@ const MiniProjects = () => {
 
 const {
     loginform,
-	emojigenerator
+	emojigenerator,
+	imagesearch,
+	qrcode,
 } = useContext(MyContext);
 const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -30,6 +32,25 @@ const miniProjectsDetails = [
         gitHubUrl: "https://github.com/Velmurugan-12/emoji-generator",
         projectUrl: "https://emoji-generator-rose.vercel.app",
     },
+	{
+		video: imagesearch,
+		projectSummary: "Image-Search | Preview",
+		projectTitle: "Image-Search",
+		//projectType: "React, Tailwindcss",
+		//technologies: "React JS",
+		gitHubUrl: "https://github.com/Velmurugan-12/search-image",
+		projectUrl: "https://search-image-pi.vercel.app",
+	},
+
+	{
+		video: qrcode,
+		projectSummary: "Qr-Code Generator | Preview",
+		projectTitle: "Qr-Code Generator",
+		//projectType: "React, Tailwindcss",
+		//technologies: "React JS",
+		gitHubUrl: "https://github.com/Velmurugan-12/qr-code",
+		projectUrl: "https://qr-code-nine-indol-67.vercel.app",
+	},
 ]
 
   return (

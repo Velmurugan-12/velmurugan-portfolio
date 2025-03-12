@@ -10,8 +10,9 @@ const SideProjects = () => {
     const {
 		ytClone,
 		moviesearch,
-		imagesearch,
-		qrcode,
+		weatherapp,
+        epicnews,
+        portfolio,
 	} = useContext(MyContext);
 
     const sideProjectsDetailsRow1 = [
@@ -26,15 +27,17 @@ const SideProjects = () => {
             projectUrl: "https://youtube-clone-six-black.vercel.app",
         },
 
-		{
-            video: moviesearch,
-            projectSummary: "Movie-Search | Preview",
-            projectTitle: "Movie-Search",
-            projectType: "React, javaScript",
+        {
+            video: epicnews,
+            projectSummary: "Epic-News | Preview",
+            projectTitle: "Epic-News",
+            projectType: "React + API",
             technologies: "React JS",
-            gitHubUrl: "https://github.com/Velmurugan-12/movie-search",
-            projectUrl: "https://movie-search-eight-blue.vercel.app",
+            gitHubUrl: "https://github.com/Velmurugan-12/epic-news",
+            projectUrl: "https://epic-news.vercel.app",
         },
+
+		
 
     ];
 
@@ -42,23 +45,32 @@ const SideProjects = () => {
 	const sideProjectsRow2 = [
 
         {
-            video: imagesearch,
-            projectSummary: "Image-Search | Preview",
-            projectTitle: "Image-Search",
-            projectType: "React, javaScript",
-            technologies: "React JS",
-            gitHubUrl: "https://github.com/Velmurugan-12/search-image",
-            projectUrl: "https://search-image-pi.vercel.app",
+            video: weatherapp,
+            projectSummary: "Weather-App | Preview",
+            projectTitle: "Weather-App",
+            projectType: "Spring-Boot",
+            technologies: "Java,HTML,CSS",
+            gitHubUrl: "https://github.com/Velmurugan-12/weather-app",
+            projectUrl: "https://weathers-app.up.railway.app",
         },
 
         {
-            video: qrcode,
-            projectSummary: "Qr-Code Generator | Preview",
-            projectTitle: "Qr-Code Generator",
+            video: portfolio,
+            projectSummary: "MY Portfolio | Preview",
+            projectTitle: "My Portfolio",
+            projectType: "Portfolio",
+            technologies: "React Js,Tailwind CSS",
+            gitHubUrl: "https://github.com/Velmurugan-12/velmurugan-portfolio",
+            projectUrl: "https://velmurugan-12.github.io/velmurugan-portfolio",
+        },
+        {
+            video: moviesearch,
+            projectSummary: "Movie-Search | Preview",
+            projectTitle: "Movie-Search",
             projectType: "React, javaScript",
             technologies: "React JS",
-            gitHubUrl: "https://github.com/Velmurugan-12/qr-code",
-            projectUrl: "https://qr-code-nine-indol-67.vercel.app",
+            gitHubUrl: "https://github.com/Velmurugan-12/movie-search",
+            projectUrl: "https://movie-search-eight-blue.vercel.app",
         },
     ];
 

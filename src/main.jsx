@@ -9,6 +9,9 @@ import qrcode from "./assets/qrcode.mp4";
 import imagesearch from "./assets/imagesearch.mp4";
 import moviesearch from "./assets/moviesearch.mp4";
 import emojigenerator from "./assets/emojigenerator.mp4";
+import epicnews from "./assets/epicnews.mp4";
+import weatherapp from "./assets/weather.mp4";
+import portfolio from "./assets/portfolio.mp4";
 
 
 export const MyContext = React.createContext();
@@ -22,6 +25,9 @@ createRoot(document.getElementById("root")).render(
       imagesearch,
       moviesearch,
       emojigenerator,
+      epicnews,
+      weatherapp,
+      portfolio,
 
     }}>
       <App />
