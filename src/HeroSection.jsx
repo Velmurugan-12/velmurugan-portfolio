@@ -41,7 +41,7 @@ const HeroSection = () => {
   return (
     <section className="container mx-auto sm:px-8 md:px-8 lg:px-12 mt-10 md:mt-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
-        {/* Left Side */}
+        
         <div className="order-2 md:order-1 flex flex-col text-center md:text-left">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold p-3 sm:p-4 mt-2">
             Hi, I'm Velmurugan
@@ -59,20 +59,18 @@ const HeroSection = () => {
             "Passionate Java Full-Stack Developer. Expertise in HTML, CSS, JavaScript. Transforming ideas into seamless, user-friendly experiences. Let's build something extraordinary together."
           </p>
 
-          {/* Social Icons */}
+          
           <div className="flex justify-center md:justify-start gap-4 p-1 sm:p-4 mb-4">
-            <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Velmurugan-12" target="_blank" rel="noopener noreferrer">
               <ImGithub className="w-7 h-7 text-gray-400 hover:text-white  transition transform hover:scale-125" />
             </a>
-            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/velmurugan-m-33351426a" target="_blank" rel="noopener noreferrer">
               <SiLinkedin className="w-7 h-7 text-gray-400 hover:text-[#0B63BD]  transition transform hover:scale-125" />
             </a>
-            <a href="https://instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer">
-              <SiInstagram className="w-7 h-7 text-gray-400 hover:text-[#F72F7E]  transition transform hover:scale-125" />
-            </a>
+            
           </div>
 
-          {/* Buttons */}
+        
           <div className="flex flex-row  items-center justify-center md:justify-start gap-4 p-2 sm:p-4 w-full">
             <a
               href={Resume}
@@ -94,7 +92,7 @@ const HeroSection = () => {
 
         </div>
 
-        {/* Right Side - Profile Image & Tech Icons */}
+        
         <div className="order-1 md:order-2 flex flex-col md:flex-row items-center md:items-start justify-center gap-16 md:gap-24">
           <div className="relative">
             <img
@@ -106,7 +104,7 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Tech Stack Icons */}
+          
           <div className="flex md:flex-col gap-6 justify-center mt-6 text-3xl">
             <SiHtml5 className="text-orange-400 opacity-60 hover:opacity-100 cursor-pointer" />
             <TfiCss3 className="text-blue-400 opacity-60 hover:opacity-100 cursor-pointer" />
