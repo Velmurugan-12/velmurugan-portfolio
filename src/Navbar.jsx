@@ -30,16 +30,25 @@ const Navbar = ({ onHireMeClick }) => {
     setToggleSideBar(false);
   };
 
+  const handleScrollToContacts = () => {
+    const projectsSection = document.getElementById("contacts");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    } 
+
+    setToggleSideBar(false);
+  };
+
   const navLinks = [
     { linkTitle: "Projects", action: handleScrollToProjects },
     { linkTitle: "Skills", action: handleScrollToSkills },
-    { linkTitle: "Contacts", link: "/contacts" },
+    { linkTitle: "Contacts", action: handleScrollToContacts },
   ];
 
   return (
     <header>
       <nav className="relative bg-[#1d2430] text-white font-semibold flex items-center justify-between px-8 top-0 z-50">
-        {/* Mobile Sidebar Toggle Button */}
+       
         <button
           className="flex md:hidden items-center gap-4 cursor-pointer"
           onClick={() => setToggleSideBar(!toggleSideBar)}

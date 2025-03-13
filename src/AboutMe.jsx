@@ -4,14 +4,14 @@ import { PiHandWavingFill, PiPhoneCallFill } from 'react-icons/pi';
 import { HiComputerDesktop } from 'react-icons/hi2';
 import { MdEmail, MdLocationOn } from "react-icons/md";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { SiInstagram } from "react-icons/si";
+import { TbPhoneCall } from "react-icons/tb";
 import { Link } from 'react-router-dom';
 import SeconNavbar from './SeconNavbar';
 import profile from './assets/profile.png';
 import Footer from './Footer';
 import TapToTop from './TapToTop';
 
-// ContactLinks Component
+
 const ContactLinks = ({ link, title, children }) => (
     <a 
         href={link} 
@@ -30,7 +30,7 @@ const AboutMe = () => {
             <SeconNavbar />
             <div className='container mx-auto px-5 lg:px-24 py-5 min-h-screen pt-10 md:pt-20' id='hire_me'>
 
-                {/* About Me Section */}
+                
                 <div className='text-2xl md:text-3xl lg:text-4xl font-semibold text-center md:text-left flex items-end gap-3'>
                     <FaUser className="text-gray-500 mb-1" />
                     About Me
@@ -38,7 +38,7 @@ const AboutMe = () => {
 
                 <div className='mt-14 flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-20'>
 
-                    {/* Profile Image */}
+                    
                     <div className='relative lg:h-[calc(140vh-6rem)]'>
                         <img
                             src={profile}
@@ -47,7 +47,7 @@ const AboutMe = () => {
                         />
                     </div>
 
-                    {/* About Me Text */}
+                    
                     <div className='text-gray-400 leading-7 flex flex-col justify-center items-center text-center lg:items-start lg:text-left lg:w-2/3'>
                         <p className="text-gray-400 text-left leading-7">
                             <span className='text-2xl text-gray-300'>
@@ -65,7 +65,7 @@ const AboutMe = () => {
                             Passionate about building scalable and efficient web applications.
                         </p>
 
-                        {/* What I Do Section */}
+                        
                         <div className='container mt-12'>
                             <h1 className='text-2xl md:text-3xl font-semibold flex items-end gap-3 text-white'>
                                 <HiComputerDesktop className='text-gray-500 mb-1' /> 
@@ -102,7 +102,7 @@ const AboutMe = () => {
                             </div>
                         </div>
 
-                        {/* Contact Me Section */}
+                        
                         <div className='container mt-16'>
                             <h1 className='text-2xl md:text-3xl font-semibold flex items-end gap-3 text-white'> 
                                 <PiPhoneCallFill className='text-gray-500 mb-1 scale-110'/>
@@ -115,19 +115,19 @@ const AboutMe = () => {
                                     <div>Send a mail</div>
                                 </ContactLinks>
 
-                                <ContactLinks link="https://www.linkedin.com/in/YOUR_USERNAME/" >
+                                <ContactLinks link="https://www.linkedin.com/in/velmurugan-m-33351426a" >
                                     <IoLogoLinkedin className="text-2xl text-blue-500"/>
                                     LinkedIn
                                 </ContactLinks>
 
-                                <ContactLinks link="https://www.instagram.com/YOUR_USERNAME/" >
-                                    <SiInstagram className="text-2xl text-red-500"/>
-                                    Instagram
+                                <ContactLinks  >
+                                    <TbPhoneCall className="text-2xl text-green-500"/>
+                                        9629245653
                                 </ContactLinks>
 
-                                {/* Location */}
+                                
                                 <div className='flex items-center gap-3 p-4 border border-gray-700 rounded-lg text-gray-300'>
-                                    <MdLocationOn className="text-2xl text-green-500"/>
+                                    <MdLocationOn className="text-2xl text-red-500"/>
                                     <span className='text-sm'>Chennai, Tamil Nadu</span>
                                 </div>
                             </div>

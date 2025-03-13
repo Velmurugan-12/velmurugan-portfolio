@@ -7,6 +7,9 @@ import HireMe from "./HireMe";
 import Skills from "./Skills";
 import Projects from "./Projects";
 import AllProjects from "./AllProjects";
+import Contact from "./Contact";
+import Footer from "./Footer";
+import TapToTop from "./TapToTop";
 
 function App() {
   return (
@@ -19,8 +22,12 @@ function App() {
               <HeroSection />
               <Projects />
               <Skills />
+              <Contact/>
               <HireMe />
+              <Footer/>
+              <TapToTop/>
             </Layout>
+
           }
         />
         <Route path="/about_me" element={<AboutMe />} />
