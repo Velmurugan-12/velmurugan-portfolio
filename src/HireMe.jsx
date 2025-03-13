@@ -1,22 +1,34 @@
-import React, { forwardRef } from "react";
+import React, { useState } from "react";
 import { RiMegaphoneFill } from "react-icons/ri";
 
-const HireMe = forwardRef((props, ref) => {
+const HireMe = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    setIsSubmitted(true);
+
+    
+    e.target.reset();
+
+    
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 3000);
+  };
+
   return (
-    <section ref={ref} className="container mx-auto px-5 sm:px-8 md:px-16 pt-20 md:pt-28">
+    <section className="container mx-auto px-5 sm:px-8 md:px-16 pt-20 md:pt-28">
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold  flex  items-end gap-3">
         <RiMegaphoneFill className="text-gray-500 mb-1" />
         Hire Me
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
-        <form 
-          action="https://formsubmit.co/mvelmurugan2192@gmail.com"
-          method="POST"
+        <form
+          onSubmit={handleSubmit}
           className="text-lg text-gray-200 flex flex-col gap-5 w-full bg-[#1A202C] p-6 rounded-lg shadow-md"
         >
-          <input type="hidden" name="_captcha" value="false" />
-          
           <input
             type="text"
             name="Name"
@@ -50,7 +62,7 @@ const HireMe = forwardRef((props, ref) => {
           />
 
           <div className="flex flex-row items-center gap-4 mt-4">
-            <button 
+            <button
               type="submit"
               className="px-10 py-2 rounded-lg bg-green-600 active:bg-green-700 hover:bg-green-500 transition w-[50%] md:w-auto"
             >
@@ -64,10 +76,15 @@ const HireMe = forwardRef((props, ref) => {
               Reset
             </button>
           </div>
+
+          
+          {isSubmitted && (
+            <p className="text-green-500 text-center mt-4">Form Submitted Successfully!</p>
+          )}
         </form>
       </div>
     </section>
   );
-});
+};
 
 export default HireMe;
