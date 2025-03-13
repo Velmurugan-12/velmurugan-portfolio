@@ -1,71 +1,90 @@
-import React from 'react';
-import { FaHtml5, FaJava, FaCss3, FaReact, FaGithub } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { GrTechnology } from "react-icons/gr";
+import React, { useState } from "react";
+import { RiMegaphoneFill } from "react-icons/ri";
 
-const fadeIn = (direction, delay) => {
-    return {
-        hidden: {
-            y: direction === 'up' ? 40 : direction === "down" ? -40 : 0,
-            x: direction === 'left' ? 40 : direction === "right" ? -40 : 0,
-            opacity: 0
-        },
-        show: {
-            y: 0,
-            x: 0,
-            opacity: 1,
-            transition: {
-                type: 'tween',
-                duration: 1.2,
-                delay: delay,
-                ease: [0.25, 0.25, 0.25, 0.75],
-            }
-        }
-    };
+const HireMe = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    setIsSubmitted(true);
+
+    
+    e.target.reset();
+
+    
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 3000);
+  };
+
+  return (
+    <section className="container mx-auto px-5 sm:px-8 md:px-16 pt-20 md:pt-28">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center flex justify-center items-end gap-3">
+        <RiMegaphoneFill className="text-gray-500 mb-1" />
+        Hire Me
+      </h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
+        <form
+          onSubmit={handleSubmit}
+          className="text-lg text-gray-200 flex flex-col gap-5 w-full bg-[#1A202C] p-6 rounded-lg shadow-md"
+        >
+          <input
+            type="text"
+            name="Name"
+            required
+            placeholder="Full Name"
+            className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+
+          <input
+            type="email"
+            name="Email"
+            required
+            placeholder="Email Address"
+            className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+
+          <input
+            type="tel"
+            name="Phone"
+            required
+            placeholder="Phone Number"
+            className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+
+          <textarea
+            name="Message"
+            required
+            placeholder="Your Message"
+            rows="5"
+            className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
+          />
+
+          <div className="flex flex-row items-center gap-4 mt-4">
+            <button
+              type="submit"
+              className="px-10 py-2 rounded-lg bg-green-600 active:bg-green-700 hover:bg-green-500 transition w-[50%] md:w-auto"
+            >
+              Submit
+            </button>
+
+            <button
+              type="reset"
+              className="px-10 py-2 rounded-lg bg-gray-600 active:bg-gray-700 hover:bg-gray-500 w-[50%] md:w-auto"
+            >
+              Reset
+            </button>
+          </div>
+
+          
+          {isSubmitted && (
+            <p className="text-green-500 text-center mt-4">Form Submitted Successfully!</p>
+          )}
+        </form>
+      </div>
+    </section>
+  );
 };
 
-const Skills = () => {
-    const skills = [
-        { skill: "HTML", icon: FaHtml5 },
-        { skill: "CSS", icon: FaCss3 },
-        { skill: "JavaScript", icon: IoLogoJavascript },
-        { skill: "ReactJS", icon: FaReact },
-        { skill: "Java", icon: FaJava },
-        { skill: "TailwindCSS", icon: RiTailwindCssFill },
-        { skill: "GitHub", icon: FaGithub },
-    ];
-
-    return (
-        <div className="container mx-auto px-5 sm:px-8 md:px-16 pt-20 md:pt-28" id="skills">
-            <h1 className="text-2xl  lg:text-3xl  font-semibold flex items-end gap-3">
-				        <GrTechnology className="text-gray-500 mb-1" />
-				            Skills
-				        <span className="text-gray-500 text-2xl">& Technologies</span>
-			      </h1>
-            <p className='  text-gray-200 mt-5 text-justify  leading-7'>
-                I not only work with these technologies but excel in using them with best practices to deliver high-quality results.
-                I have been working with all these skills to build my portfolio projects.Proficient in <span className="font-bold ">React JS</span>,{" "}
-				      <span className="font-bold ">JavaScript</span>, and modern frontend technologies.
-            </p>
-            <div className='flex flex-wrap mt-10 justify-center gap-10'>
-                {skills.map((item, index) => {
-                    const IconComponent = item.icon;
-                    return (
-                        <div
-                            key={index}
-                            className='flex flex-col items-center transition-transform duration-500 hover:translate-y-2'
-                        >
-                            <div className='bg-white text-cyan-400 h-[80px] w-[80px] flex items-center justify-center rounded-full hover:text-white hover:bg-orange-400 hover:scale-105 transform transition-all duration-500 text-5xl border border-cyan-500 hover:border-white-500'>
-                                <IconComponent />
-                            </div>
-                            <p className='text-gray-200 font-bold mt-2'>{item.skill}</p>
-                        </div>
-                    );
-                })}
-            </div>
-        </div>
-    );
-};
-
-export default Skills;
+export default HireMe;

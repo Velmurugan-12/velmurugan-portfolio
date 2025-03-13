@@ -4,25 +4,19 @@ import { RiMegaphoneFill } from "react-icons/ri";
 const HireMe = forwardRef((props, ref) => {
   return (
     <section ref={ref} className="container mx-auto px-5 sm:px-8 md:px-16 pt-20 md:pt-28">
-      
-      
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-center flex justify-center items-center gap-3">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold  flex  items-end gap-3">
         <RiMegaphoneFill className="text-gray-500 mb-1" />
         Hire Me
       </h1>
 
-      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
         <form 
           action="https://formsubmit.co/mvelmurugan2192@gmail.com"
           method="POST"
           className="text-lg text-gray-200 flex flex-col gap-5 w-full bg-[#1A202C] p-6 rounded-lg shadow-md"
         >
-          
           <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
-
-         
+          
           <input
             type="text"
             name="Name"
@@ -31,7 +25,6 @@ const HireMe = forwardRef((props, ref) => {
             className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
-          
           <input
             type="email"
             name="Email"
@@ -40,7 +33,6 @@ const HireMe = forwardRef((props, ref) => {
             className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
-          
           <input
             type="tel"
             name="Phone"
@@ -49,7 +41,6 @@ const HireMe = forwardRef((props, ref) => {
             className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
-          
           <textarea
             name="Message"
             required
@@ -58,7 +49,6 @@ const HireMe = forwardRef((props, ref) => {
             className="bg-[#1D2430] rounded-md px-5 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500"
           />
 
-          
           <div className="flex flex-row items-center gap-4 mt-4">
             <button 
               type="submit"
