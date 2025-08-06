@@ -115,7 +115,7 @@ const AboutMe = () => {
                                     <div>Send a mail</div>
                                 </ContactLinks>
 
-                                <ContactLinks link="https://www.linkedin.com/in/velmurugan-m-33351426a" >
+                                <ContactLinks link="https://www.linkedin.com/in/velmurugan-m-2b1922372" >
                                     <IoLogoLinkedin className="text-2xl text-blue-500"/>
                                     LinkedIn
                                 </ContactLinks>
