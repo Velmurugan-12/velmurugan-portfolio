@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
 
   const scrollToHireMe = () => {
     if (hireMeRef.current) {
-      const topOffset = hireMeRef.current.offsetTop - 80; // Offset to prevent cutting off the section
+      const topOffset = hireMeRef.current.offsetTop - 80; 
       window.scrollTo({
         top: topOffset,
         behavior: "smooth",
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     <>
       {location.pathname !== "/about_me" && <Navbar onHireMeClick={scrollToHireMe} />}
       <div>{children}</div>
-      {/* Make sure HireMe is wrapped with this ref */}
+     
       <div ref={hireMeRef} id="hireMeSection"></div>
     </>
   );

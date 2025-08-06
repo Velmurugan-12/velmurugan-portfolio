@@ -13,7 +13,6 @@ const HireMe = () => {
     setLoading(true);
     setSuccess(null);
     setErrorMessage("");
-
     try {
       const response = await emailjs.sendForm(
         "service_9wx3uli",  
@@ -21,12 +20,9 @@ const HireMe = () => {
         formRef.current,
         "mTsFp8QpIVR-uo1lC"
       );
-
       if (response.status === 200) {
         setSuccess(true);
-        formRef.current.reset();
-
-        
+        formRef.current.reset(); 
         setTimeout(() => setSuccess(null), 3000);
       } else {
         throw new Error("Failed to send message.");
@@ -35,8 +31,6 @@ const HireMe = () => {
       console.error("Email sending failed:", error);
       setSuccess(false);
       setErrorMessage(error.text || "Something went wrong. Please try again.");
-      
-      
       setTimeout(() => {
         setSuccess(null);
         setErrorMessage("");
