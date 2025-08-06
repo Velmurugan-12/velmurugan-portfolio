@@ -3,7 +3,7 @@ import { SiHtml5, SiInstagram, SiLinkedin, SiTailwindcss } from "react-icons/si"
 import { ImGithub } from "react-icons/im";
 import { MdDownload } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
-import Resume from "./assets/Resume1.pdf";
+import Resume from "./assets/Resume2.pdf";
 import profile from "./assets/profile.png";
 import { FaJava, FaReact } from "react-icons/fa6";
 import { TfiCss3 } from "react-icons/tfi";
